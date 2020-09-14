@@ -2,7 +2,7 @@ import com.company.Main;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class sortAscTest {
@@ -19,8 +19,16 @@ public class sortAscTest {
     }
 
     @Test
-    void testWorking(){
+    void testNonSortedArrayWorking(){
         m.sortAsc(testArray);
         assertArrayEquals(correctArray,testArray);
+    }
+
+    @Test
+    void testSortedArrayWorking(){
+        int[] temp = correctArray;
+        assertArrayEquals(correctArray,temp);
+        m.sortAsc(testArray);
+        assertArrayEquals(temp,correctArray);
     }
 }
