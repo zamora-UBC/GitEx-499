@@ -21,4 +21,12 @@ public class sortDescTest {
         m.sortDesc(testArray);
         assertArrayEquals(correctArray,testArray);
     }
+
+    @Test
+    void testSortedArrayWorking(){
+        int[] temp = correctArray;
+        assertArrayEquals(correctArray,temp);
+        m.sortDesc(testArray);
+        assertArrayEquals(temp,correctArray);
+    }
 }
