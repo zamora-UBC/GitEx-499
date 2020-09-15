@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        /*hello*/
+        /*hello world*/
         Scanner in = new Scanner(System.in);
         System.out.println("Please enter 5 numbers to sort:");
         int arr[] = new int[5];
